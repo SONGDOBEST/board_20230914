@@ -1,2 +1,5 @@
-package com.icia.member.dto;public class MemberDTO {
+package com.icia.member.dto;
+
+public class MemberDTO {
+
 }

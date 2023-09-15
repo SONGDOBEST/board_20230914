@@ -1,0 +1,30 @@
+body {
+    background-color: #75b798;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    background-color: #1a1d20;
+}
+.menu-item{
+    list-style-type: none;
+    margin-left: 20px;
+}
+.menu-item a{
+    text-decoration: none;
+    /* a태그는 기본적으로 inline 요소.
+     inline은 높이, 너비를 가질 수 없음
+     block은 가질 수 있음
+     아래 문법은 block요소로 하는 방법.
+     */
+    display: block;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+.menu-item a:hover{
+    background-color: #20c997;
+}
+#login-area{
+    display: flex;
+}

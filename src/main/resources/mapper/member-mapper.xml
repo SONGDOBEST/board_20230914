@@ -11,4 +11,22 @@
         insert into member_file_tb (originalFileName, storeFileName, memberId)
         values (#{originalFileName}, #{storeFileName}, #{memberId})
     </insert>
+    <select id="findAll" resultType="member">
+        select * from member_tb order by id desc;
+    </select>
+    <delete id="delete" parameterType="Long">
+        delete from member_tb where id = #{id};
+    </delete>
+    <select id="login" parameterType="member" resultType="member">
+        select * from member_tb where memberEmail=#{memberEmail} and memberPassword=#{memberPassword}
+    </select>
+    <select id="findById" parameterType="Long" resultType="member">
+        select * from member_tb where id=#{id}
+    </select>
+    <select id="findFile" parameterType="Long" resultType="memberFile">
+        select * from member_file_tb where memberId=#{memberId}
+    </select>
+    <update id="update" parameterType="member">
+        update member_tb set memberPassword=#{memberPassword}, memberMobile=#{memberMobile} where id=#{id}
+    </update>
 </mapper>
